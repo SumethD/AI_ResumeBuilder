@@ -6,7 +6,8 @@ import { AuthProvider } from './context/AuthContext';
 import './index.css';
 
 // Get the base URL from the environment or use the default
-const basename = import.meta.env.BASE_URL;
+// For Netlify deployments, we want to use '/' as the basename
+const basename = import.meta.env.PROD && !import.meta.env.VITE_BASE_URL ? '/' : import.meta.env.BASE_URL;
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
