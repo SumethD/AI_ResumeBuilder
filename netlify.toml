@@ -5,4 +5,11 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200 
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Ensure Vite environment variables are properly passed
+[context.production.environment]
+  VITE_BASE_URL = "/" 
