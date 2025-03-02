@@ -1,0 +1,26 @@
+[
+  {
+    "id": "professional",
+    "name": "Professional",
+    "description": "A clean, professional template suitable for corporate positions",
+    "thumbnail": "/templates/thumbnails/professional.jpg"
+  },
+  {
+    "id": "creative",
+    "name": "Creative",
+    "description": "A modern, creative template for design and marketing roles",
+    "thumbnail": "/templates/thumbnails/creative.jpg"
+  },
+  {
+    "id": "technical",
+    "name": "Technical",
+    "description": "Optimized for technical roles with skills emphasis",
+    "thumbnail": "/templates/thumbnails/technical.jpg"
+  },
+  {
+    "id": "executive",
+    "name": "Executive",
+    "description": "Elegant template for senior management and executive positions",
+    "thumbnail": "/templates/thumbnails/executive.jpg"
+  }
+] 
