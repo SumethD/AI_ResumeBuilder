@@ -1,64 +1,82 @@
 # AI Resume Builder
 
-A modern web application that helps users create, optimize, and tailor their resumes for specific job descriptions using AI.
+A modern web application that helps users create, optimize, and analyze resumes using AI technologies.
 
 ## Features
 
-- **Resume Upload**: Upload existing resumes in various formats (PDF, DOCX)
-- **AI-Powered Optimization**: Analyze and optimize resumes based on job descriptions
-- **Template Selection**: Choose from multiple professional resume templates
-- **Section Editing**: Edit all resume sections including personal details, contact info, professional summary, employment history, education, and skills
-- **ATS Compatibility**: Ensure your resume passes Applicant Tracking Systems
-- **Export Options**: Download your optimized resume in multiple formats
+### Resume Builder
+- Multi-step form wizard to create professional resumes
+- Sections for personal details, contact information, employment history, education, skills, and additional sections
+- Review and edit capabilities
 
-## Tech Stack
+### Resume Parser
+- Upload existing resumes in PDF or DOCX format
+- Automatically extract structured data from resume files
+- Use extracted data to pre-fill the resume builder form
+- Supports rule-based extraction with optional AI enhancement
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- OpenAI API
-- Supabase
+### Resume Analysis
+- Compare resumes against job descriptions
+- Get AI-powered feedback and suggestions
+- Identify missing keywords and skills
 
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
-   ```
-   git clone https://github.com/yourusername/AI_ResumeBuilder.git
-   cd AI_ResumeBuilder
-   ```
+```bash
+git clone https://github.com/yourusername/AI_ResumeBuilder.git
+cd AI_ResumeBuilder
+```
 
 2. Install dependencies
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file in the root directory with the following variables:
-   ```
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   VITE_OPENAI_API_KEY=your_openai_api_key
-   ```
-
-4. Start the development server
-   ```
-   npm run dev
-   ```
-
-## Deployment
-
-To build the application for production:
-
+```bash
+npm install
 ```
-npm run build
+
+3. Start the development server
+```bash
+npm run dev
 ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Using the Resume Parser
+
+The Resume Parser feature allows you to upload an existing resume and extract structured data from it. Here's how to use it:
+
+1. Navigate to the Dashboard
+2. Click on the "Parse Resume" button
+3. Upload your resume file (PDF or DOCX format)
+4. Click "Parse Resume" to extract the data
+5. Review the extracted information
+6. Use the extracted data to pre-fill the resume builder form
+
+### Supported File Types
+- PDF (.pdf)
+- Microsoft Word (.docx)
+
+### Dependencies
+
+The Resume Parser uses the following libraries:
+- `pdfjs-dist` for parsing PDF files
+- `mammoth` for parsing DOCX files
+- Optional OpenAI integration for enhanced extraction
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- PDF.js
+- Mammoth.js
+- OpenAI API (optional)
 
 ## License
 

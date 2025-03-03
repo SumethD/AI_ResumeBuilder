@@ -1,34 +1,41 @@
 export interface PersonalDetails {
-  firstName?: string;
-  lastName?: string;
-  jobTitle?: string;
-  photo?: string;
+  firstName: string;
+  lastName: string;
+  title: string;
+  dateOfBirth?: string;
+  nationality?: string;
+  summary?: string;
 }
 
 export interface ContactInfo {
-  email?: string;
-  phone?: string;
-  country?: string;
-  city?: string;
+  email: string;
+  phone: string;
   address?: string;
-  postalCode?: string;
+  city?: string;
+  state?: string;
+  zipCode?: string;
+  country?: string;
+  linkedin?: string;
+  website?: string;
 }
 
 export interface Employment {
-  jobTitle: string;
-  employer: string;
+  company: string;
+  position: string;
   startDate: string;
-  endDate?: string;
-  location?: string;
-  description?: string;
+  endDate: string;
+  current: boolean;
+  description: string;
+  achievements: string[];
 }
 
 export interface Education {
-  degree: string;
   institution: string;
+  degree: string;
+  field: string;
   startDate: string;
-  endDate?: string;
-  location?: string;
+  endDate: string;
+  gpa?: string;
   description?: string;
 }
 
@@ -38,13 +45,19 @@ export interface AdditionalSection {
 }
 
 export interface ResumeData {
-  personalDetails?: PersonalDetails;
-  contactInfo?: ContactInfo;
-  summary?: string;
-  employment?: Employment[];
-  education?: Education[];
-  skills?: string[];
-  additionalSections?: AdditionalSection[];
+  personalDetails: PersonalDetails;
+  contactInfo: ContactInfo;
+  employment: Employment[];
+  education: Education[];
+  skills: string[];
+  additionalSections: AdditionalSection[];
+}
+
+export interface ProcessedResume {
+  originalText: string;
+  optimizedText: string;
+  suggestions: string[];
+  score: number;
 }
 
 export type ResumeSection = 
